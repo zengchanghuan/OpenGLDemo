@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8E71F55821411498008F8018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F55721411498008F8018 /* AppDelegate.m */; };
 		8E71F55B21411498008F8018 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F55A21411498008F8018 /* ViewController.m */; };
-		8E71F55E21411498008F8018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71F55C21411498008F8018 /* Main.storyboard */; };
 		8E71F5602141149D008F8018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E71F55F2141149D008F8018 /* Assets.xcassets */; };
-		8E71F5632141149D008F8018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71F5612141149D008F8018 /* LaunchScreen.storyboard */; };
 		8E71F5662141149D008F8018 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F5652141149D008F8018 /* main.m */; };
 		8E71F5702141149D008F8018 /* OpenGLDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F56F2141149D008F8018 /* OpenGLDemoTests.m */; };
 		8E71F57B2141149D008F8018 /* OpenGLDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F57A2141149D008F8018 /* OpenGLDemoUITests.m */; };
+		8E71F58A21411853008F8018 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F58921411853008F8018 /* OpenGLView.m */; };
+		8E71F58D21413279008F8018 /* GLUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E71F58B21413279008F8018 /* GLUtil.c */; };
+		8E71F590214135D0008F8018 /* vert.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8E71F58E214135D0008F8018 /* vert.glsl */; };
+		8E71F591214135D0008F8018 /* frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8E71F58F214135D0008F8018 /* frag.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +42,7 @@
 		8E71F55721411498008F8018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E71F55921411498008F8018 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8E71F55A21411498008F8018 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E71F55D21411498008F8018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E71F55F2141149D008F8018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E71F5622141149D008F8018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E71F5642141149D008F8018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E71F5652141149D008F8018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E71F56B2141149D008F8018 /* OpenGLDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,12 @@
 		8E71F5762141149D008F8018 /* OpenGLDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E71F57A2141149D008F8018 /* OpenGLDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLDemoUITests.m; sourceTree = "<group>"; };
 		8E71F57C2141149D008F8018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E71F58821411853008F8018 /* OpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		8E71F58921411853008F8018 /* OpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		8E71F58B21413279008F8018 /* GLUtil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GLUtil.c; sourceTree = "<group>"; };
+		8E71F58C21413279008F8018 /* GLUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLUtil.h; sourceTree = "<group>"; };
+		8E71F58E214135D0008F8018 /* vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vert.glsl; sourceTree = "<group>"; };
+		8E71F58F214135D0008F8018 /* frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = frag.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,13 @@
 				8E71F55721411498008F8018 /* AppDelegate.m */,
 				8E71F55921411498008F8018 /* ViewController.h */,
 				8E71F55A21411498008F8018 /* ViewController.m */,
-				8E71F55C21411498008F8018 /* Main.storyboard */,
+				8E71F58821411853008F8018 /* OpenGLView.h */,
+				8E71F58921411853008F8018 /* OpenGLView.m */,
+				8E71F58F214135D0008F8018 /* frag.glsl */,
+				8E71F58E214135D0008F8018 /* vert.glsl */,
+				8E71F58B21413279008F8018 /* GLUtil.c */,
+				8E71F58C21413279008F8018 /* GLUtil.h */,
 				8E71F55F2141149D008F8018 /* Assets.xcassets */,
-				8E71F5612141149D008F8018 /* LaunchScreen.storyboard */,
 				8E71F5642141149D008F8018 /* Info.plist */,
 				8E71F5652141149D008F8018 /* main.m */,
 			);
@@ -235,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E71F5632141149D008F8018 /* LaunchScreen.storyboard in Resources */,
+				8E71F590214135D0008F8018 /* vert.glsl in Resources */,
 				8E71F5602141149D008F8018 /* Assets.xcassets in Resources */,
-				8E71F55E21411498008F8018 /* Main.storyboard in Resources */,
+				8E71F591214135D0008F8018 /* frag.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E71F58D21413279008F8018 /* GLUtil.c in Sources */,
 				8E71F55B21411498008F8018 /* ViewController.m in Sources */,
 				8E71F5662141149D008F8018 /* main.m in Sources */,
 				8E71F55821411498008F8018 /* AppDelegate.m in Sources */,
+				8E71F58A21411853008F8018 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,25 +310,6 @@
 			targetProxy = 8E71F5772141149D008F8018 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8E71F55C21411498008F8018 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E71F55D21411498008F8018 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E71F5612141149D008F8018 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E71F5622141149D008F8018 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8E71F57D2141149D008F8018 /* Debug */ = {
